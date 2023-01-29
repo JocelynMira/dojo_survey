@@ -11,8 +11,7 @@
     <div style='height: 90px'>
         <div class='container bg-secondary col-7 mx-auto p-3'>
             <h1 class='text-center text-warning'>Dojo Survey</h1>
-            <!-- TOP OF FORM: NAME GENDER LOCATION-->
-            <form action = '/new_user' method='POST' class='text-warning col-5 mx-auto'>
+            <form action = '/process' method='POST' class='text-warning col-5 mx-auto'>
                 <label for ='name' class='mb-1'>Name:</label><br>
                 <input type='text' name='name' placeholder='Your Name' class='col-12'><br>
                 <label for ='form-select' class='mb-1'>Gender:</label>
@@ -45,15 +44,15 @@
                 <textarea name='comment' id='comment' cols='10' rows='5' class='col-12'></textarea>
                 <div class='text-center mt-2 mb-2'>
                     <p>Is it ok to contact you for future surveys?</p>
-                    <div class='form-check' name='survey_ok'>
-                        <input class='form-check-input' type='radio' value='yes' checked>
+                    <div class='form-check' >
+                        <input class='form-check-input' type='radio' name='survey' value='yes'>
                         <label class='form-check-label'>Yes!</label>
                     </div>
-                    <div class='form-check mb-2' name='no_survey'>
-                        <input class='form-check-input' type='radio' value='no'>
+                    <div class='form-check mb-2'>
+                        <input class='form-check-input' type='radio' name='no_survey' value='no'>
                         <label class='form-check-label'>No</label>
                     </div>
-                    <input type='checkbox' value='subscribe' name='subscribe'> I want to subscribe to monthly newsletter.
+                    <input type='checkbox' value='Yes, Subscribe!' name='subscribe'> I want to subscribe to monthly newsletter.
                 </div>
                 <div class='d-grid'>
                     <button type='submit' class='btn btn-primary ' value="new_user">Submit</button>

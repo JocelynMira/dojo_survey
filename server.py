@@ -6,10 +6,8 @@ app.secret_key="mysecretkeyfordojosurvey"
 def index():
     return render_template ('index.html')
 
-@app.route('/new_user', methods=['POST'])
-def new_user():
-    print('Got Post Info')
-    print(request.form) 
+@app.route('/process', methods=['POST'])
+def process():
     # Here we add propertes to session to store
     session['name'] = request.form['name']
     session['gender'] = request.form['gender']
@@ -21,8 +19,6 @@ def new_user():
 
 @app.route('/result')
 def result():
-    print ('Showing the User Info From the Form')
-    print (request.form)
     return render_template('result.html')
 
 if __name__=="__main__":

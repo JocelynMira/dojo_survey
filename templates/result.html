@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Result</title>
+    <link rel='stylesheet' href='static\css\style.css'>
+</head>
+<body>
+
+<div class='container'>
+    <div class='data'>
+        <p class='heading'>Submitted Info</h4>
+        <h3 class='username'>{{session['name']}}</h3>
+        <p>Gender: {{session['gender']}}</p>
+        <p>Dojo Location: {{session['location']}}</p>
+        <p>Language: {{session['language']}}</p>
+        <p>Comment:<br>
+        {{session['comment']}}</p>
+        <h3>{{session['survey_ok']}}</h3>
+        <h3>{{session['no_survey']}}</h3>
+        <p>Subscribe: {{session['subscribe']}}</p>
+        <a class="index" href="/">Home</a>
+    </div>
+</div>
+
+
+
+</body>
+</html>
